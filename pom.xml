@@ -12,7 +12,7 @@
   <version>5.4.4-SNAPSHOT</version>
   <name>aviator</name>
   <description>A high performance scripting language hosted on the JVM</description>
-  <url>https://github.com/killme2008/aviator</url>
+  <url>https://github.com/aviatorscript/aviatorscript</url>
   <inceptionYear>2010</inceptionYear>
 
   <developers>
@@ -23,14 +23,14 @@
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:git@github.com:killme2008/aviator.git</connection>
-    <developerConnection>scm:git:git@github.com:killme2008/aviator.git</developerConnection>
-    <url>git@github.com:killme2008/aviator.git</url>
+    <connection>scm:git:git@github.com:aviatorscript/aviatorscript.git</connection>
+    <developerConnection>scm:git:git@github.com:aviatorscript/aviatorscript.git</developerConnection>
+    <url>git@github.com:aviatorscript/aviatorscript.git</url>
   </scm>
   <licenses>
     <license>
-      <name>GNU LESSER GENERAL PUBLIC LICENSE</name>
-      <url>http://www.gnu.org/licenses/lgpl.html</url>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
     </license>
   </licenses>
 

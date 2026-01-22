@@ -1,6 +1,6 @@
 # AviatorScript
 
-![Build Status](https://github.com/killme2008/aviatorscript/actions/workflows/maven.yml/badge.svg)
+![Build Status](https://github.com/aviatorscript/aviatorscript/actions/workflows/maven.yml/badge.svg)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.aviatorscript/aviator.svg?label=maven%20central)](https://search.maven.org/search?q=g:io.github.aviatorscript%20AND%20aviator)
 
 📖 English Documentation
@@ -23,16 +23,16 @@ It compiles script to java byte code and evaluate it on the fly.
 7. Multiple ways to easily [call Java methods](https://www.yuque.com/boyan-avfmj/aviatorscript/xbdgg2), with full support for the Java [script API](https://www.yuque.com/boyan-avfmj/aviatorscript/bds23b) (facilitating script calls from Java).
 8. Rich [customization options](https://www.yuque.com/boyan-avfmj/aviatorscript/yr1oau), usable as a secure language sandbox and a fully featured language.
 9. Dynamic compilation and execution, lightweight, and high performance. In ASM mode, it directly compiles scripts into JVM bytecode. [Interpretation mode](https://www.yuque.com/boyan-avfmj/aviatorscript/ok8agx) can run on non-standard Java platforms like Android.
-10. Supports [serialization of compiled results](https://github.com/killme2008/aviatorscript/blob/master/src/test/java/com/googlecode/aviator/example/SerializeExample.java), facilitating caching and compiling acceleration. Supports [execution timeout settings](https://github.com/killme2008/aviatorscript/blob/master/src/test/java/com/googlecode/aviator/example/TimeoutExample.java) to prevent resource exhaustion by disruptive scripts.
+10. Supports [serialization of compiled results](https://github.com/aviatorscript/aviatorscript/blob/master/src/test/java/com/googlecode/aviator/example/SerializeExample.java), facilitating caching and compiling acceleration. Supports [execution timeout settings](https://github.com/aviatorscript/aviatorscript/blob/master/src/test/java/com/googlecode/aviator/example/TimeoutExample.java) to prevent resource exhaustion by disruptive scripts.
 
 
 **Recommend version 5.2.6 and above.**
 
 # News
 
-* [5.4.3](https://github.com/killme2008/aviatorscript/releases/tag/aviator-5.4.3)，add the `enableSandboxMode` to enable sandbox mode etc.
-* [5.4.2](https://github.com/killme2008/aviatorscript/releases/tag/aviator-5.4.2)，add the `getFunctionNames` method to retrieve a list of functions and set the evaluation timeout, etc.
-* [5.4.1](https://github.com/killme2008/aviatorscript/releases/tag/aviator-5.4.1)，Fixed recursive function can't work, fixed function can't be serialized etc.
+* [5.4.3](https://github.com/aviatorscript/aviatorscript/releases/tag/aviator-5.4.3)，add the `enableSandboxMode` to enable sandbox mode etc.
+* [5.4.2](https://github.com/aviatorscript/aviatorscript/releases/tag/aviator-5.4.2)，add the `getFunctionNames` method to retrieve a list of functions and set the evaluation timeout, etc.
+* [5.4.1](https://github.com/aviatorscript/aviatorscript/releases/tag/aviator-5.4.1)，Fixed recursive function can't work, fixed function can't be serialized etc.
 
 # Dependency
 
@@ -48,10 +48,10 @@ Check available versions at [search.maven.org](https://search.maven.org/search?q
 
 # Quick Start
 
-1. Download [aviator](https://raw.githubusercontent.com/killme2008/aviator/master/bin/aviator)  shell script to a directory in system `PATH` environment variable，such as  `~/bin/aviator`:
+1. Download [aviator](https://raw.githubusercontent.com/aviatorscript/aviatorscript/master/bin/aviator)  shell script to a directory in system `PATH` environment variable，such as  `~/bin/aviator`:
 
 ```sh
-$ wget https://raw.githubusercontent.com/killme2008/aviator/master/bin/aviator
+$ wget https://raw.githubusercontent.com/aviatorscript/aviatorscript/master/bin/aviator
 $ chmod u+x aviator
 ```
 
@@ -93,6 +93,6 @@ The year is: 120
 The month is: 3
 ```
 
-A complex example is [calculator.av](https://github.com/killme2008/aviatorscript/blob/master/examples/calculator.av) which evaluates arithmetic expression in string.
+A complex example is [calculator.av](https://github.com/aviatorscript/aviatorscript/blob/master/examples/calculator.av) which evaluates arithmetic expression in string.
 
 Read [user guide](https://www.yuque.com/boyan-avfmj/aviatorscript/cpow90?translate=en) for details.
