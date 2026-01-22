@@ -87,7 +87,7 @@ if [ "$1" = "self-install" ]; then
     AVIATOR_DIR=`dirname "$AVIATOR_JAR"`
     mkdir -p "$AVIATOR_DIR"
     mkdir -p "$AVIATOR_DEPS"
-    AVIATOR_URL="https://github.com/killme2008/aviator/raw/master/downloads/aviator-$AVIATOR_VERSION.jar"
+    AVIATOR_URL="https://github.com/aviatorscript/aviatorscript/raw/master/downloads/aviator-$AVIATOR_VERSION.jar"
     $HTTP_CLIENT "$AVIATOR_JAR" "$AVIATOR_URL"
     if [ $? != 0 ]; then
         echo "Failed to download $AVIATOR_URL"
@@ -129,7 +129,7 @@ elif [ "$1" = "upgrade" ]; then
                 if ["$OSTYPE" = "cygwin" ]; then
                     TARGET=`cygpath -w $TARGET`
                 fi
-                AVIATOR_SCRIPT_URL="https://github.com/killme2008/aviator/raw/$TARGET_VERSION/bin/aviator"
+                AVIATOR_SCRIPT_URL="https://github.com/aviatorscript/aviatorscript/raw/$TARGET_VERSION/bin/aviator"
                 $HTTP_CLIENT "$TARGET" "$AVIATOR_SCRIPT_URL" \
                     && mv "$TARGET" "$SCRIPT" \
                     && chmod +x "$SCRIPT" \
