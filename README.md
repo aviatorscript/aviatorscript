@@ -3,10 +3,6 @@
 ![Build Status](https://github.com/aviatorscript/aviatorscript/actions/workflows/maven.yml/badge.svg)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.aviatorscript/aviator.svg?label=maven%20central)](https://search.maven.org/search?q=g:io.github.aviatorscript%20AND%20aviator)
 
-📖 English Documentation
-
-----------------------------------------
-
 `AviatorScript` is a lightweight, high performance scripting language hosted on the JVM (and Android platform).
 It compiles script to java byte code and evaluate it on the fly.
 
