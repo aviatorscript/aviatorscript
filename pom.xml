@@ -152,6 +152,19 @@
 	  </archive>
 	</configuration>
       </plugin>
+      <plugin>
+	<!-- Automatically close and deploy from OSSRH -->
+	<groupId>org.sonatype.central</groupId>
+	<artifactId>central-publishing-maven-plugin</artifactId>
+	<version>0.6.0</version>
+	<extensions>true</extensions>
+	<configuration>
+	  <publishingServerId>ossrh</publishingServerId>
+	  <tokenAuth>true</tokenAuth>
+	  <!-- Release versions will be synced to Maven Central automatically. -->
+	  <autoPublish>true</autoPublish>
+	</configuration>
+      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
@@ -164,13 +177,9 @@
   </build>
   <distributionManagement>
     <snapshotRepository>
-      <id>oss</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+      <id>ossrh</id>
+      <url>https://central.sonatype.com</url>
     </snapshotRepository>
-    <repository>
-      <id>oss</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
   </distributionManagement>
   <profiles>
     <profile>
@@ -263,7 +272,7 @@
 	<plugins>
 	  <plugin>
 	    <artifactId>maven-gpg-plugin</artifactId>
-	    <version>1.6</version>
+	    <version>3.2.7</version>
 	    <executions>
 	      <execution>
 		<id>sign-artifacts</id>
@@ -273,6 +282,13 @@
 		</goals>
 	      </execution>
 	    </executions>
+	    <configuration>
+	      <!-- Prevent gpg from using pinentry programs -->
+	      <gpgArguments>
+		<arg>--pinentry-mode</arg>
+		<arg>loopback</arg>
+	      </gpgArguments>
+	    </configuration>
 	  </plugin>
 	  <!-- Maven plugin which includes build-time git repository information
 	       into an POJO / *.properties). Make your apps tell you which version exactly
