@@ -39,6 +39,11 @@
     </license>
   </licenses>
 
+  <properties>
+    <!-- Skip GPG signing by default, enable during deploy with -Dgpg.skip=false -->
+    <gpg.skip>true</gpg.skip>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -193,6 +198,28 @@
 	  <autoPublish>true</autoPublish>
 	</configuration>
       </plugin>
+      <plugin>
+	<artifactId>maven-gpg-plugin</artifactId>
+	<version>3.2.7</version>
+	<executions>
+	  <execution>
+	    <id>sign-artifacts</id>
+	    <phase>verify</phase>
+	    <goals>
+	      <goal>sign</goal>
+	    </goals>
+	  </execution>
+	</executions>
+	<configuration>
+	  <!-- Skip signing by default, enable during deploy -->
+	  <skip>${gpg.skip}</skip>
+	  <!-- Prevent gpg from using pinentry programs -->
+	  <gpgArguments>
+	    <arg>--pinentry-mode</arg>
+	    <arg>loopback</arg>
+	  </gpgArguments>
+	</configuration>
+      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
@@ -299,26 +326,6 @@
       </activation>
       <build>
 	<plugins>
-	  <plugin>
-	    <artifactId>maven-gpg-plugin</artifactId>
-	    <version>3.2.7</version>
-	    <executions>
-	      <execution>
-		<id>sign-artifacts</id>
-		<phase>verify</phase>
-		<goals>
-		  <goal>sign</goal>
-		</goals>
-	      </execution>
-	    </executions>
-	    <configuration>
-	      <!-- Prevent gpg from using pinentry programs -->
-	      <gpgArguments>
-		<arg>--pinentry-mode</arg>
-		<arg>loopback</arg>
-	      </gpgArguments>
-	    </configuration>
-	  </plugin>
 	  <!-- Maven plugin which includes build-time git repository information
 	       into an POJO / *.properties). Make your apps tell you which version exactly
 	       they were built from! Priceless in large distributed deployments. https://github.com/ktoso/maven-git-commit-id-plugin -->
