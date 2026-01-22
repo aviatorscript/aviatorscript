@@ -53,3 +53,4 @@ jobs:
         GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         OSSRH_JIRA_USERNAME: ${{ secrets.OSSRH_JIRA_USERNAME }}
         OSSRH_JIRA_PASSWORD: ${{ secrets.OSSRH_JIRA_PASSWORD }}
+        MAVEN_OPTS: "-Prelease"

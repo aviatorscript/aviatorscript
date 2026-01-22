@@ -256,17 +256,6 @@
       <id>release</id>
       <activation>
 	<activeByDefault>false</activeByDefault>
-	<property>
-	  <!-- where property `performRelease` comes from? - maven-release-plugin
-	       Whether to use the release profile that adds sources and javadocs to the
-	       released artifact, if appropriate. If set to true, the release plugin sets
-	       the property "performRelease" to true, which activates the profile "release-profile",
-	       which is inherited from the super pom. Default value is: true. https://maven.apache.org/plugins-archives/maven-release-plugin-2.2.2/perform-mojo.html
-	       - All models implicitly inherit from a super-POM which added maven-source-plugin
-	       and maven-javadoc-plugin https://maven.apache.org/ref/3.0.4/maven-model-builder/super-pom.html -->
-	  <name>performRelease</name>
-	  <value>true</value>
-	</property>
       </activation>
       <build>
 	<plugins>
