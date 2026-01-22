@@ -30,7 +30,7 @@ jobs:
           gpg-passphrase: GPG_PASSPHRASE
 
       - name: Build with Maven
-        run: mvn clean test cobertura:cobertura
+        run: mvn clean test
 
       - name: Codecov
         uses: codecov/codecov-action@v4
